@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      
+        body {
+            background-color: rgb(231, 162, 198);
+            font-weight: 900;
+            /* background-image: url(../16.jpg);
+            background-size: 100%;
+            background-repeat: no-repeat; */
+            
+        }
+
+        tr {
+            background-color: lightcyan;
+        }
+
+        img {
+            width: 150px;
+            height: 100px;
+        }
+    </style>
+
+</head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<body>
+
+    <div class="container-fluid mt-2 ">
+        <br>
+        <h1 style="text-align: center;color: greenyellow;text-shadow: 1px 1px 3px whitesmoke;" id="myH2">Shaun the Sheep
+            </h2>
+            <p style="text-align: center;color: green;text-shadow: 1px 1px 1px whitesmoke;">
+                在英國的一個鄉村農場裡，一個農夫經營著自己的牧場。這位笨笨的農夫養著包括羊的一大群動物，其中有一隻叫尚恩（Shaun）的羊。</p>
+
+            <table class="table table-hover table-bordered border-primary">
+                <thead class="text-center">
+                    <tr style=" background-color: rgb(19, 232, 232);text-shadow: 1px 1px 1px white;">
+                        <th width="5%">品 項</th>
+                        <th width="18%">圖 片</th>
+                        <th width="12%">價 格</th>
+                        <th width="12%">數 量</th>
+                        <th width="18%">小 計</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    <tr>
+                        <td>
+                            <div style="font-size: 24px;padding-top: 35px; class="mt-4">
+                                1
+                            </div>
+                        </td>
+                        <td>
+                            <img src="https://4.bp.blogspot.com/-E3VBfZWXvlQ/WDZxcm4ZI3I/AAAAAAALbfQ/d7BCOYhpB0IqoevEIJ8Gtiscx0KjZgz9wCLcB/s1600/AS000724_19.gif"
+                                alt="">
+                        </td>
+                        <td>
+                            <div class="mt-4">
+                                <input type="number" class="form-control menu-price text-center" value="100">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="mt-4">
+                                <input type="number" class="form-control menu-num text-center" value="0">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="mt-4">
+                                <input type="number" class="form-control menu-total text-center">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="font-size:24px;padding-top: 35px; class="mt-4">
+                                2
+                            </div>
+                        </td>
+                        <td>
+                            <img src="https://2.bp.blogspot.com/-8xyYtNvDhcE/WDZxXkxHQ6I/AAAAAAALbeo/D66RnmLOE-IsUh1Xx2VP_NtKgePgOXUZACLcB/s1600/AS000724_09.gif"
+                                alt="">
+                        </td>
+                        <td>
+                            <div class="mt-4">
+                                <input type="number" class="form-control menu-price text-center" value="150">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="mt-4">
+                                <input type="number" class="form-control menu-num text-center" value="0">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="mt-4">
+                                <input type="number" class="form-control menu-total text-center">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="font-size: 24px;padding-top: 35px; class="mt-4">
+                                3
+                            </div>
+                        </td>
+                        <td>
+                            <img src="https://3.bp.blogspot.com/-jLDmFhAq3Yk/WDZxRNdvVQI/AAAAAAALbeI/9zP1SUBLaboQlNwCJgupypJQs_LWRpBIwCLcB/s1600/AS000724_01.gif"
+                                alt="">
+                        </td>
+                        <td>
+                            <div class="mt-4">
+                                <input type="number" class="form-control menu-price text-center" value="200">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="mt-4">
+                                <input type="number" class="form-control menu-num text-center" value="0">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="mt-4">
+                                <input type="number" class="form-control menu-total text-center">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr style=" background-color: rgb(212, 241, 229);">
+                        <td style="padding-bottom: 35px;text-shadow: 1px 1px 4px rgb(22, 212, 98);text-align: center;color: rgb(240, 14, 52);" colspan="2" >
+                            <div style="font-size: 25px;padding-top: 50px; class="mt-4" >
+                                總 計
+                            </div> 
+                        </td>
+                       
+                        <td colspan="3">
+                            <div style="font-size: 30px;margin-bottom: 10px;color: blue;" class="mt-4">
+                                小 計 = <span id="myResult"></span>
+                            </div>
+                           
+                            <div class="mt-4">
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">
+                                    calculate
+                                </button>
+                            </div>
+                        </td>
+                       
+                    </tr>
+
+                </tbody>
+            </table>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    total: <span id="modalResult">12345</span>
+                    <div id="bonus" class="text-danger">
+                        666
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script>
+
+        $(document).ready(function () {
+            $('.menu-price, .menu-num').change(function () {
+                const a = $(this).closest('tr');
+                const price = parseFloat(a.find('.menu-price').val());
+                const num = parseFloat(a.find('.menu-num').val());
+                const total = price * num;
+                a.find('.menu-total').val(total);
+            });
+        });
+
+    </script> -->
+
+    <script>
+
+
+
+        // JQUERY 放在ready內
+        $(document).ready(function () {
+            function getSum() {
+                let sum = 0;
+                $.each(myTotal, function (indexInArray, valueOfElement) {
+                    console.log('indexInArray', indexInArray);
+                    console.log('valueOfElement', valueOfElement);
+                    let totalVaule = Number($(valueOfElement).val());
+                    sum = sum + totalVaule;
+                    console.log('sum', sum);
+                });
+                myResult.text(sum);
+                modalResult.text(sum);
+
+                bonus.hide();
+                if (sum > 1000) {
+                    let bonusValue = sum * 0.8;
+                    bonus.text(`恭喜您 超過200 獲得 優惠8折 => ${bonusValue}`);
+                    bonus.show();
+                }
+
+            }
+
+
+            //  綁定
+            const myPrice = $('.menu-price');
+            const myNum = $('.menu-num');
+            const myTotal = $('.menu-total');
+            const myResult = $('#myResult');
+            const modalResult = $('#modalResult');
+            const bonus = $('#bonus');
+
+            // 預設display none -> jquery hide()
+            bonus.hide();
+
+
+
+            // myResult.text('55688');
+            // 全部加總
+            // 1.取得 全部的total -> sum
+            // 2. sum -> myResult text
+            // 3. 重構 重複程式碼 變成function
+            getSum();
+
+            console.log('myPrice', myPrice);
+            console.log('myNum', myNum);
+            console.log('myTotal', myTotal);
+            // 方法一
+            $.each(myNum, function (indexInArray, valueOfElement) {
+                // console.log('indexInArray', indexInArray);
+                // console.log('valueOfElement', valueOfElement);
+                $(valueOfElement).click(function () {
+                    // console.log('this', this);
+
+
+
+                    // jquery method parent() 找上一層 推薦使用
+                    // jquery method parents() 找上面全部 少用
+                    // jquery method parentsUntil('tr') 找tr以下全部 更少用
+                    // jquery method find('.menu-price') 往下找menu-price class
+                    // console.log('parent', $(this).parent());
+                    // console.log('parent.parent', $(this).parent().parent());
+                    // console.log('parent.parent.parent', $(this).parent().parent().parent());
+                    // console.log('parent.parent.parent.find-price', $(this).parent().parent().parent().find('.menu-price'));
+                    // console.log('parent.parent.parent.find-total', $(this).parent().parent().parent().find('.menu-total'));
+                    // console.log('parentsUntil(tr)', $(this).parentsUntil('tr'));
+                    // console.log('parentsUntil(tr).parent', $(this).parentsUntil('tr').parent());
+                    // console.log('parentsUntil(tbody)', $(this).parentsUntil('tbody'));
+
+
+                    // 1-1 單行小計
+                    // 抓到num
+                    // 抓到price => get 
+                    // num * price 
+                    // 存到total => set
+
+                    // 1-1 單行小計
+                    // 抓到num
+                    let numValue = Number($(this).val());
+                    console.log('numValue', numValue);
+                    // 抓到price
+                    // 先到tr 再到price
+                    let trNow = $(this).parent().parent().parent();
+                    let priceNow = trNow.find('.menu-price');
+                    let priceValue = Number(priceNow.val());
+                    // num * price 
+                    let totalValue = priceValue * numValue;
+                    console.log('totalValue', totalValue);
+                    // 存到total => set
+                    let totalNow = trNow.find('.menu-total');
+                    console.log('totalNow', totalNow);
+                    totalNow.val(totalValue); // set
+
+
+                    // let priceValueSet = priceNow.val(100); error
+                    // get 取得資料 priceNow.val();
+                    // set 設定資料 priceNow.val('500');
+                    // console.log('priceValue', priceValue);
+
+
+
+
+                    // console.log('trNow', trNow);
+                    // console.log('priceNow', priceNow);
+                    // console.log('priceValue', priceValue);
+                    // num * price
+                    // 存到total
+
+
+
+                    // 上一層的tag
+                    // 
+
+                    // 1.調整num 全部total 加總
+                    // 2.總共多少btn 全部total 超過300打八折
+
+                    // bs modal
+
+
+                    // total -> sum
+                    getSum();
+                    // tottal -> sum end
+
+                });
+
+            });
+        });
+        // jquery end
+    </script>
+</body>
+
+</html>

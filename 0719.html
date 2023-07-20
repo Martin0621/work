@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>點餐系統</title>
+    <style>
+        /* 一些基本的CSS樣式，用於排版和美化 */
+        * {
+            font-family: "標楷體";
+            text-align: center;
+        }
+
+        body {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRegoHvqz3zSX6-pcAAzAGgnTYWNQ-maDq_IA3HvdW-5rHznanaCNJoc2KMs3g_j-ovBVI&usqp=CAU);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            background-size: 100%;
+        }
+
+        .container {
+            width: 50%;
+            text-align: center;
+        }
+
+        .item {
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            padding: 5px;
+
+        }
+
+        .item:hover {
+            background-color: #ed6d6d;
+        }
+
+        .item input[type="number"] {
+            width: 50px;
+            border-radius: 100%;
+        }
+
+        /* 添加多種顏色 */
+        .color1 {
+            background-color: #f9d6d5;
+        }
+
+        .color2 {
+            background-color: #f9ec62;
+        }
+
+        .color3 {
+            background-color: #9b98f4;
+        }
+
+        .color4 {
+            background-color: #f9d5f5;
+        }
+
+        .color5 {
+            background-color: #aaed2f;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>歡迎使用點餐系統</h1>
+
+        <h2>選擇你的商品</h2>
+        <div class="item color1">
+            <input type="checkbox" name="item" data-price="100">1號套餐 - 單價：$100
+            <br>
+            數量：<input type="number" name="quantity" value="0" min="0">
+            <br>
+            金額小計：<span class="subtotal">0</span>元
+        </div>
+        <div class="item color2">
+            <input type="checkbox" name="item" data-price="150">2號套餐 - 單價：$150
+            <br>
+            數量：<input type="number" name="quantity" value="0" min="0">
+            <br>
+            金額小計：<span class="subtotal">0</span>元
+        </div>
+        <div class="item color3">
+            <input type="checkbox" name="item" data-price="200">3號套餐 - 單價：$200
+            <br>
+            數量：<input type="number" name="quantity" value="0" min="0">
+            <br>
+            金額小計：<span class="subtotal">0</span>元
+        </div>
+        <div class="item color4">
+            <input type="checkbox" name="item" data-price="250">4號套餐 - 單價：$250
+            <br>
+            數量：<input type="number" name="quantity" value="0" min="0">
+            <br>
+            金額小計：<span class="subtotal">0</span>元
+        </div>
+        <div class="item color5">
+            <input type="checkbox" name="item" data-price="300">5號套餐 - 單價：$300
+            <br>
+            數量：<input type="number" name="quantity" value="0" min="0">
+            <br>
+            金額小計：<span class="subtotal">0</span>元
+        </div> 
+        <h1 style="color: #0633fe;">總金額：<span id="totalAmount">0</span>元</h2>
+    </div>
+
+    <script src="script.js"></script>
+
+
+<script>// 監聽所有商品的checkbox和數量變化
+    const checkboxes = document.querySelectorAll('input[name="item"]');
+    const quantityInputs = document.querySelectorAll('input[name="quantity"]');
+    checkboxes.forEach(function (checkbox) {
+        checkbox.addEventListener('change', function () {
+            calculateTotal();
+        });
+    });
+    quantityInputs.forEach(function (input) {
+        input.addEventListener('change', function () {
+            calculateTotal();
+        });
+    });
+
+    // 計算金額小計和總金額
+    function calculateTotal() {
+        let total = 0;
+        checkboxes.forEach(function (checkbox, index) {
+            const price = parseInt(checkbox.dataset.price);
+            const quantity = parseInt(quantityInputs[index].value);
+            const subtotal = price * quantity;
+            total += subtotal;
+            document.getElementsByClassName('subtotal')[index].textContent = subtotal;
+        });
+        document.getElementById('totalAmount').textContent = total;
+    }
+</script>
+</body>
+
+</html>

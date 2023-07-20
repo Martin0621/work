@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Timing</h2>
+
+<p >現在時間</p>
+
+
+<h1 style="color: darkorange;" id="nowT"></h1>
+<h1 style="color: darkcyan;" id="nowD"></h1>
+<script>
+setInterval(myTimer,100);
+
+function myTimer() {
+  const d = new Date();
+  document.getElementById("nowD").innerHTML = d.toLocaleDateString();
+  document.getElementById("nowT").innerHTML = d.toLocaleTimeString();
+}
+</script>
+
+</body>
+</html>
