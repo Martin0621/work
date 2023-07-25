@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>台北至泰國機票查詢</title>
+</head>
+
+<body>
+    <h1>台北至泰國機票查詢</h1>
+    <button onclick="getFlights()">查詢機票</button>
+    <div id="flights"></div>
+
+    <script>
+        async function getFlights() {
+            try {
+                const response = await fetch('https://api.pexels.com/videos/popular');
+                const data = await response.json();
+                displayFlights(data);
+            } catch (error) {
+                console.error('無法獲取機票資訊：', error);
+            }
+        }
+
+        function displayFlights(flights) {
+            const flightsDiv = document.getElementById('flights');
+            flightsDiv.innerHTML = ''; // 清空先前的結果
+
+            if (flights.length === 0) {
+                flightsDiv.innerHTML = '<p>很抱歉，目前無法找到可用的機票。</p>';
+            } else {
+                const flightsList = document.createElement('ul');
+                flights.forEach(flight => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `${flight.airline} - ${flight.price} 新台幣`;
+                    flightsList.appendChild(listItem);
+                });
+                flightsDiv.appendChild(flightsList);
+            }
+        }
+    </script>
+</body>
+
+</html>
