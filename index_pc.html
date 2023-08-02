@@ -14,14 +14,23 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <style>
+    body {
+      background-color: rgb(223, 105, 8, 0.1);
+    }
+
     header {
-      color: #6344ef;
+      color: #d57adf;
       text-align: center;
-      padding: 10px;
+      padding: 50px;
       margin-top: 5px;
-      height: 10VH;
+      height: 100VH;
+      background-image: url(https://media.audleytravel.com/-/media/images/home/southeast-asia/thailand/letterbox-images/istock_40230012_thailand_3000x1000.jpg?q=79&w=1920&h=640);
+      background-size: 98%;
+      background-repeat: no-repeat;
+      background-position: center;
+
 
     }
 
@@ -32,33 +41,50 @@
     .nav {
       list-style: none;
       display: flex;
-      justify-content: center;
+      justify-content: right;
       font-size: 30px;
       font-weight: 900;
       background-size: 10%;
-      background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN66FL_xG8glZIn2VrfmfHyKQ4S6sJOYl75g&usqp=CAU);
-      padding: 10px;
+      padding-right: 100px;
+      background-color: rgb(238, 241, 243, 0.1);
     }
 
     nav ul li {
       margin: 0 10px;
+
     }
 
     .nav2 {
-      color: #fff;
+      color: #c0a003;
       text-decoration: none;
-
+      padding: 10px;
     }
 
     .nav2:hover {
-      /* background-image: url(https://www.jimmyspa.com/dist/assets/img/about/ele.png); */
+
       background-size: 100%;
-      font-size:26px;
-      color: rgb(247, 18, 18);
+      font-size: 40px;
+      color: rgb(79, 8, 232);
+      /* background-color: rgb(118, 222, 238); */
+      /* border-radius: 50%; */
+    }
+
+    .view {
+      background-image: url(https://media.gettyimages.com/id/1338319555/zh/%E5%90%91%E9%87%8F/smooth-blend-rainbow-glow-abstract-background.jpg?s=612x612&w=0&k=20&c=s6AJyJ_UAfcOSS1oJtbRNrSMwgsJ51_GuWpA8fTqLyQ=);
+      background-size: 250%;
+    }
+
+    .food {
+      background-image: url(https://media.gettyimages.com/id/486298437/zh/%E7%85%A7%E7%89%87/multi-colored-abstract-background-of-the-flower.jpg?s=612x612&w=0&k=20&c=0HNLRhl1yg34Z0ReuwHYF3Q--l0nRBHueyhkZvfyCXk=);
+      background-size: 100%;
     }
 
     main {
       padding: 20px;
+    }
+
+    .boxID {
+      display: none;
     }
 
     section {
@@ -81,8 +107,7 @@
 
     .video-container {
       position: relative;
-      width: 100%;
-      padding-bottom: 56.25%;
+      background-color: rgb(221, 246, 212);
     }
 
     .video-container iframe {
@@ -91,6 +116,7 @@
       left: 0;
       width: 100%;
       height: 100%;
+      padding: 40px;
     }
 
     #mapContainer {
@@ -101,21 +127,19 @@
     }
 
     footer {
-      background-color: #333;
-      color: #fff;
+      /* background-color: #78b0f0; */
+      color: #0e0d0d;
       text-align: center;
-      padding: 10px;
     }
-
 
     .heart {
       display: flex;
       flex-wrap: wrap;
       width: 270px;
-      margin-left: 100px;
+      margin-left: 330px;
       position: fixed;
       animation-name: heart;
-      animation-duration: 15s;
+      animation-duration: 10s;
       animation-iteration-count: infinite;
       animation-timing-function: linear;
 
@@ -123,7 +147,7 @@
 
     @keyframes heart {
       0% {
-        top: -300px;
+        top: -200px;
       }
 
       100% {
@@ -142,684 +166,931 @@
     .color {
       background-color: rgb(248, 184, 239);
     }
+
+    /* 40px */
+    .toTop-arrow {
+      width: 2.5rem;
+      height: 2.5rem;
+      padding: 0;
+      margin: 0;
+      border: 0;
+      border-radius: 33%;
+      opacity: 0.6;
+      background: #000;
+      cursor: pointer;
+      position: fixed;
+      right: 1rem;
+      bottom: 1rem;
+      display: none;
+    }
+
+    .toTop-arrow::before,
+    .toTop-arrow::after {
+      width: 18px;
+      height: 5px;
+      border-radius: 3px;
+      background: #f90;
+      position: absolute;
+      content: "";
+    }
+
+    .toTop-arrow::before {
+      transform: rotate(-45deg) translate(0, -50%);
+      left: 0.5rem;
+    }
+
+    .toTop-arrow::after {
+      transform: rotate(45deg) translate(0, -50%);
+      right: 0.5rem;
+    }
+
+    .toTop-arrow:focus {
+      outline: none;
+    }
+
+    .toTop-arrow {
+      width: 3rem;
+      height: 3rem;
+      padding: 0;
+      margin: 0;
+      border: 0;
+      border-radius: 33%;
+      opacity: 0.6;
+      background: #000;
+      cursor: pointer;
+      position: fixed;
+      right: 1rem;
+      bottom: 1rem;
+      display: none;
+    }
+
+    .toTop-arrow::before,
+    .toTop-arrow::after {
+      width: 25px;
+      height: 6px;
+      border-radius: 3px;
+      background: #f90;
+      position: absolute;
+      content: "";
+    }
+
+    .toTop-arrow::before {
+      transform: rotate(-45deg) translate(0, -50%);
+      left: 0.42rem;
+    }
+
+    .toTop-arrow::after {
+      transform: rotate(45deg) translate(0, -50%);
+      right: 0.42rem;
+    }
+
+    .toTop-arrow:focus {
+      outline: none;
+    }
+
+    .toTop-arrow {
+      width: 3.5rem;
+      height: 3.5rem;
+      padding: 0;
+      margin: 0;
+      border: 0;
+      border-radius: 33%;
+      opacity: 0.6;
+      background: #000;
+      cursor: pointer;
+      position: fixed;
+      right: 1rem;
+      bottom: 1rem;
+      display: none;
+    }
+
+    .toTop-arrow::before,
+    .toTop-arrow::after {
+      width: 31px;
+      height: 7px;
+      border-radius: 3px;
+      background: #f90;
+      position: absolute;
+      content: "";
+    }
+
+    .toTop-arrow::before {
+      transform: rotate(-45deg) translate(0, -50%);
+      left: 0.4rem;
+    }
+
+    .toTop-arrow::after {
+      transform: rotate(45deg) translate(0, -50%);
+      right: 0.4rem;
+    }
+
+    .toTop-arrow:focus {
+      outline: none;
+    }
   </style>
 </head>
 
 <body>
-
-  <header
-    style="background-image: url(https://images-tw.girlstyle.com/wp-content/uploads/2019/02/2019%E7%91%A4%E7%91%A4_%E9%8C%AF%EF%BC%BB%E6%AA%9C%E3%83%BD%E3%82%99_pc_ver4.jpg?auto=format&w=1053);background-size: 100%;">
-    <h1 style="font-size: 50px;margin-top: 10px;"><em>
-      𝓣𝓱𝓪𝓲𝓵𝓪𝓷𝓭</em></h1>
-  </header>
-
-  <nav>
-
-    <ul class="nav">
-
-      <li style="color: #fff;">&#10047;</i></li>
-      <li><a class="nav2" href="#martin">作者</a></li>
-      <li><a class="nav2" href="#introduction">泰國</a></li>
-      <li><a class="nav2" href="#attractions">景點</a></li>
-      <li><a class="nav2" href="#food">甜點</a></li>
-      <li><a class="nav2" href="#videos">影片</a></li>
-      <li><a class="nav2" href="#links">連結</a></li>
-      <li style="color: #fff;">&#10047;</li>
-    </ul>
-  </nav>
-  <main
-    style="background-image: url(https://images-tw.girlstyle.com/wp-content/uploads/2019/02/2019%E7%91%A4%E7%91%A4_%E9%8C%AF%EF%BC%BB%E6%AA%9C%E3%83%BD%E3%82%99_pc_ver3.jpg?auto=format&w=1053);background-size: 100%;background-repeat: no-repeat;">
-    <!-- <div class="container">
-          <div class="row">
-            <div class="col-10"> -->
-    <section class="martin">
-
-      <div class="container-fluid text-center border border-danger mt-1">
-        <div class="row ">
-          <div class=" box mt-1">
-
-            <h1>作者</h1>
-            <img style="width: 200px;background-color: rgb(244, 244, 246);"
-              src="https://scontent.ftpe7-4.fna.fbcdn.net/v/t1.6435-9/131462155_4171317816228581_9150446953696123093_n.jpg?_nc_cat=107&cb=99be929b-3346023f&ccb=1-7&_nc_sid=174925&_nc_ohc=fL0uUdpf-hoAX8RLf8k&_nc_ht=scontent.ftpe7-4.fna&oh=00_AfAWGZFKYF_9BwBVlnqnCxobAenMXCfeyweFJmtZjaGB9w&oe=64E06BE7"
-              alt="作者照片" id="photo">
-
-            <!-- <h5 style="color: rgb(70, 116, 6);;">
-              大家好！我叫<strong style="color: blue;">哲源</strong>，是一個善良、活潑、熱心、好奇、鬼靈精、愛乾淨的退伍軍人，我從國中就進入軍校，高中、二專也都是在軍校就學，在軍中服役滿20年從事過飛機修護、行政及物流相關工作，我喜歡交朋友，期許未來能找到一個和諧的工作環境。
-
-            </h5> -->
-            <p style="color: dodgerblue;font-size: 22px;text-align: left;width: 50%;margin-left: 500px;">
-              大家好！我是<strong
-                style="color: blue;">哲源</strong>，個性善良、活潑、熱心、好奇，是個鬼靈精的退伍軍人；在軍中服役20年從事過飛機修護、行政及物流相關工作，我喜歡交朋友，期許未來能找到一個和諧的工作環境。
-            </p>
-          </div>
-          <div>
-            <h2></h2>
-
-            <h5>Line ID：martin19850621</h5>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="container-fluid text-center border border-info mt-1">
-        <div class="row ">
-          <div class=" box mt-1">
-            <section id="introduction">
-              <h2>泰國介紹</h2>
-              <div style="text-align: left;">
-                <h5 style="color: blue;">
-                  泰國前名暹邏，位於中國和印度間中南半島之心臟地帶。舉國上下尊崇佛教。多個世紀以來，一直是東南亞地區宗教、文化和多個民族的匯集地。泰國面積約五十萬平方公里，與法國國土相若。人口約六千餘萬。泰西北與緬甸為鄰，東北接寮國、東連柬埔寨，南部與馬來西亞接壤。
-                  據一般考古學家的了解，泰族是發源於中國的南部，而於公元早期世紀才移居到目前的泰國。最初，他們在泰國北部的清森、清萊及清邁組成了幾個市州。但是這些市州對鄰旁的地區並沒有什麼影響。然後泰國人逐漸地向南移居到中原地帶，直至勢力霸佔整個中印半島。可是，考古學家在泰國東北部的萬昌發現許多古老的遺跡，證明泰國的文化起源於大約五千年前的青銅文化期。
-                </h5>
-
-                <div style="color: green;">
-                  <img style="width: 350px;float:left;margin-left: 10px;"
-                    src="https://www.tattpe.org.tw/assets/images/info/map.jpg" alt="泰國圖片">
-                  <br><br><br><br><br><br><br><br><br>
-                  <br><br><br><br><br><br>
-                  東北部：當地人稱為「伊森」的東北部屬湄公河流域，是山巒起伏的高原地帶，亦為5,600年前上古銅器時代文化薈萃的區域，受到鄰國高棉與寮國的影響而孕育豐富文化歷史及民俗節慶。
-                  <br>
-                  北部：多山區叢林地形，山林景緻迷人，日常工作仍靠大象操作，也是泰國最涼爽的地區，最具代表性的城市即為清邁與清萊。冬季氣候清涼，可種植櫻桃和桃子。
-                  <br>
-                  東部：最著名的觀光景點是芭達雅，而沿海星羅棋布的島嶼中，有許多更是觀光勝地，例如沙美島、昌島等。
-                  <br>
-                  中部：平原土地肥沃，盛產大米和水果，山脈和河谷縱橫交錯，是發展水力發電的理想地區。曼谷即位於泰國中部，其他如華欣、七岩、大城等，都是中部的著名景點。
-                  <br>
-                  南部：擁有潔白海灘、成群島嶼及豐富天然資源，例如錫礦、橡膠園和漁產。被安達曼海域與暹邏灣所包圍的泰南，有世界最好的海灘，除了普吉島，蘇梅、帕安島、龜島等都是絕佳的度假或潛水勝地。
-                  </p>
-                </div>
-
-            </section>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="container-fluid text-center border border-warning mt-1">
-        <div class="row ">
-          <div class=" box mt-1">
-            <section id="attractions">
-              <h2>熱門景點</h2>
-              <ul>
-                <li>
-                  <h3>北部：</h3>
-                  <h5>多山區叢林地形，山林景緻迷人，日常工作仍靠大象操作，也是泰國最涼爽的地區，最具代表性的城市即為清邁與清萊。冬季氣候清涼，可種植櫻桃和桃子。</h5>
-
-                  <div class="row">
-                    <div class="col-6">
-                      <div id="carouselExampleCaptions_1" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselExampleCaptions_1" data-bs-slide-to="0"
-                            class="active aria-current=" true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleCaptions_1" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleCaptions_1" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                          <button type="button" data-bs-target="#carouselExampleCaptions_1" data-bs-slide-to="3"
-                            aria-label="Slide 4"></button>
-                          <button type="button" data-bs-target="#carouselExampleCaptions_1" data-bs-slide-to="4"
-                            aria-label="Slide 5"></button>
-                        </div>
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="https://tluxe-aws.hmgcdn.com/public/article/2017/atl_20221109165309_115.jpg"
-                              class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>清邁 ChiangMai</h5>
-                              <p>清邁是泰國的第二大城，保有許多的文化遺產，又有『藝術建築之寶殿堂』之稱。</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_201908300015.jpg"
-                              class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>素可泰
-                                Sukhothai</h5>
-                              <p>素可泰的原意是『幸福的黎明』，遺留著昔日的佛寺和宮殿燦爛的光華，在豐采中散發著一股古樸的氣氛！</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_201908300016.jpg"
-                              class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>清萊 ChiangRai</h5>
-                              <p>群山景致、古文明遺址、歷史古蹟、佛教寺廟，和多個高山民族部落，至今仍維持迷人生活型態的純樸村莊。</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_201908300018.jpg"
-                              class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>湄宏順
-                                Mae Hong Son</h5>
-                              <p>四處點綴著壯麗的發瀑流泉與湍急的溪流鳴澗，為泰國版圖上最富原始情味的地區。</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_201908300019.jpg"
-                              class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>擺鎮 Pai</h5>
-                              <p>這個如神奇寶石般的地方從不知名的小村莊逐漸發展成為繁榮的多文化城鎮。</p>
-                            </div>
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions_1"
-                          data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions_1"
-                          data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                      </div>
-                    </div>
-
-
-                    <div class="col-6">
-                      <div id="mapContainer" class="carousel slide" data-bs-ride="carousel">
-                        <iframe style="width: 800px;height: 600px;"
-                          src="https://www.google.com/maps/d/u/2/embed?mid=1csYYB5OKmBpqOAgpEzD5gaL3lrm3dxAg"
-                          frameborder="0"></iframe>
-                      </div>
-                    </div>
-                  </div>
-                  <hr>
-                </li>
-                <li>
-                  <h3>
-                    東北部：</h3>
-                  <h5>當地人稱為「伊森」的東北部屬湄公河流域，是山巒起伏的高原地帶，亦為5,600年前上古銅器時代文化薈萃的區域，受到鄰國高棉與寮國的影響而孕育豐富文化歷史及民俗節慶。</h5>
-
-                  <div class="row">
-                    <div class="col-6">
-                      <div id="carouselExampleCaptions_2" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselExampleCaptions_2" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleCaptions_2" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleCaptions_2" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                          <button type="button" data-bs-target="#carouselExampleCaptions_2" data-bs-slide-to="3"
-                            aria-label="Slide 4"></button>
-                          <button type="button" data-bs-target="#carouselExampleCaptions_2" data-bs-slide-to="4"
-                            aria-label="Slide 5"></button>
-                        </div>
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_2019083000119.jpg"
-                              class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>雷府 Loei</h5>
-                              <p>位於泰國東北部，寮國邊境，充滿異國風情及大自然野趣的雷府 Loei ，是深度旅遊的首選景點。</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_2019083000123.jpg"
-                              class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>烏汶府 Ubon Ratchathani</h5>
-                              <p>烏汶府市是一個新興的商業中心，這裡集合道路、鐵路及航空交通樞紐。</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_2019083000121.jpg"
-                              class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>素林 Surin</h5>
-                              <p>素林府的歷史與大象、泰絲及高棉帝國時期遺蹟息息相關。</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_2019083000122.jpg"
-                              class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>西薩菊Si Sa Ket</h5>
-                              <p>西薩菊有12座保存的高棉遺址，是歷史旅迷不可錯過的景點。</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_2019083000120.jpg"
-                              class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>汶里藍
-                                Buri Ram</h5>
-                              <p>汶里藍碧邁歷史遺跡公園到汶里府靠近高棉邊境的高棉古寺帕儂藍寺景觀令人為觀止。</p>
-                            </div>
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions_2"
-                          data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions_2"
-                          data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                      </div>
-                    </div>
-
-
-                    <div class="col-6">
-                      <div id="mapContainer" class="carousel slide" data-bs-ride="carousel">
-                        <iframe style="width: 800px;height: 600px;"
-                          src="https://www.google.com/maps/d/u/2/embed?mid=1q48FBqRHQKMUmwuVhJ-kRPdM0HL-BMRf"
-                          frameborder="0"></iframe>
-                      </div>
-                      <hr>
-
-                </li>
-                <li>
-                  <h3>東部：</h3>
-                  <h5>最著名的觀光景點是芭達雅，而沿海星羅棋布的島嶼中，有許多更是觀光勝地，例如沙美島、昌島等。</h5>
-                  <div class="row">
-                    <div class="col-6">
-                      <div id="carouselExampleCaptions_3" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselExampleCaptions_3" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleCaptions_3" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleCaptions_3" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_2019083000111.jpg"
-                              class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>芭達雅 Pattaya</h5>
-                              <p>充滿浪漫情調的椰子、棕櫚樹為背景的沙灘，夜生活、色情文化豐富，一到芭達雅 Pattaya 便開始感受到渡假的氣氛。</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_2019083000110.jpg"
-                              class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>昌島 Ko Chang </h5>
-                              <p>自然風光，海灣環繞，處處潔白沙灘、湛藍澄淨的海水，讓人恍如置身桃花源中。</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_2019083000112.jpg"
-                              class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>羅永 Rayong</h5>
-                              <p>羅永擁有多變的地形景觀，從翠綠高山、多階瀑布、棕櫚樹林搖曳生姿的海灘和島嶼。</p>
-                            </div>
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions_3"
-                          data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions_3"
-                          data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div id="mapContainer" class="carousel slide" data-bs-ride="carousel">
-                        <iframe style="width: 800px;height: 600px;"
-                          src="https://www.google.com/maps/d/u/2/embed?mid=1UqeuYjWXfsbeQDIl_2OWtxQhRm_zlO21"
-                          frameborder="0"></iframe>
-                      </div>
-                    </div>
-                    <hr>
-
-                </li>
-                <li>
-                  <h3>中部：</h3>
-                  <h5>平原土地肥沃，盛產大米和水果，山脈和河谷縱橫交錯，是發展水力發電的理想地區；曼谷即位於泰國中部，其他如華欣、七岩、大城等，都是中部的著名景點。</h5>
-                  <div class="row">
-                    <div class="col-6">
-                      <div id="carouselExampleCaptions_4" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselExampleCaptions_4" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleCaptions_4" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleCaptions_4" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                          <button type="button" data-bs-target="#carouselExampleCaptions_4" data-bs-slide-to="3"
-                            aria-label="Slide 4"></button>
-                          <button type="button" data-bs-target="#carouselExampleCaptions_4" data-bs-slide-to="4"
-                            aria-label="Slide 5"></button>
-                        </div>
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_201908300013.jpg"
-                              class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>曼谷 Krung Thep Maha Nakhon (Bangkok)</h5>
-                              <p>同時兼具古老氣息和現代風情的東方大城，是個處處充滿著讚歎與美麗的地方。</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_201908300011.jpg"
-                              class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>甘加那汶里府
-                                Kanchanaburi</h5>
-                              <p>北碧府擁有許多旅遊特色：自然優美的瀑布及國家公園，洞穴奇景、河上旅館，市區周圍有許多旅遊景點。</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_201908300012.jpg"
-                              class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>安帕瓦市
-                                Amphoe Amphawa</h5>
-                              <p>安帕瓦市在泰國大城王朝晚期及拉達那哥王朝早期有重要歷史文獻記載。</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_20190830001.jpg"
-                              class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>大城 Ayutthaya</h5>
-                              <p>大城像一個手藝精湛的雕刻家，當地的寺廟、皇宮及佛像的鏤刻，無不表現出莊嚴典雅的作品。</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="https://www.tattpe.org.tw/uploads/attraction/CicadaMarket2_1.jpg"
-                              class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>華欣 HuaHin</h5>
-                              <p>永恆的渡假天堂，泰國皇室最鍾愛的避暑勝地古文明風華萬千，佛教之美點滴烙下痕跡 。</p>
-                            </div>
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions_4"
-                          data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions_4"
-                          data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div id="mapContainer" class="carousel slide" data-bs-ride="carousel">
-                        <iframe style="width: 800px;height: 600px;"
-                          src="https://www.google.com/maps/d/u/2/embed?mid=1MixjnPnVdrmr73c71aBNvSQ9nSIRG4xR"
-                          frameborder="0"></iframe>
-
-                      </div>
-                    </div>
-                    <hr>
-                </li>
-                <li>
-                  <h3>南部：</h3>
-                  <h5>擁有潔白海灘、成群島嶼及豐富天然資源，例如錫礦、橡膠園和漁產。被安達曼海域與暹邏灣所包圍的泰南，有世界最好的海灘，除了普吉島，蘇梅、帕安島、龜島等都是絕佳的度假或潛水勝地。</h5>
-                  <div class="row">
-                    <div class="col-6">
-                      <div id="carouselExampleCaptions_5" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselExampleCaptions_5" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleCaptions_5" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleCaptions_5" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                          <button type="button" data-bs-target="#carouselExampleCaptions_5" data-bs-slide-to="3"
-                            aria-label="Slide 4"></button>
-                        </div>
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_2019083000114.jpg"
-                              class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>普吉 Phuket</h5>
-                              <p>普吉 Phuket 具有得天獨厚的湛藍色大海、弦月形海灣、細柔白沙灘和一些點綴其中的美麗小島。</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_2019083000113.jpg"
-                              class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>喀比 Krabi</h5>
-                              <p>喀比 Karabi 不僅有美不勝收的海景，也極適合生態及探險旅遊。</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_2019083000116.jpg"
-                              class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>蘇叻他尼
-                                Surat Thani</h5>
-                              <p>蘇叻他尼 Surat Thani 是泰國南部地區最老的城市之一，它的歷史可追溯至數千年前。</p>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <img src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_2019083000115.jpg"
-                              class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                              <h5>攀牙府
-                                Phang Nga</h5>
-                              <p>攀牙府 Phang-Nga 獨特的地貌特徵、色彩斑斕的珊瑚和海洋景觀也是其倍受關注的重要原因。</p>
-                            </div>
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions_5"
-                          data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions_5"
-                          data-bs-slide="next">
-                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="col-6">
-                      <div id="mapContainer" class="carousel slide" data-bs-ride="carousel">
-                        <iframe style="width: 800px;height: 600px;"
-                          src="https://www.google.com/maps/d/u/2/embed?mid=1ZG9qtboaEkuMbqVI5iHVOzPapclFFKYt"
-                          frameborder="0"></iframe>
-                      </div>
-                    </div>
-                  </div>
-          </div>
-        </div>
-      </div>
-
-
-      </li>
-      </ul>
-    </section>
-
-
-    <div class="container-fluid text-center border border-success mt-1">
-      <div class="row ">
-        <div class=" box mt-1">
-          <section id="food">
-
-            <h2>泰國甜點</h2>
-            <ul>
-              <li>
-                <h3 style="color: lightskyblue;">泰式千層糕</h3>
-                <p style="color:darkorange;">泰式千層糕通常做9層，因為在泰國文化中，9有象徵繁榮、事業成功的寓意，所以做9層（最吉利），常出現在公司聚會或是婚禮等盛大慶祝活動。</p>
-                <img style="width: 500px;height: 300px;" src="https://pic.pimg.tw/wispa/1586454985-3595165911_n.jpg"
-                  alt="泰式千層糕">
-              </li>
-              <li>
-                <h3 style="color: lightskyblue;">泰式南瓜布丁</h3>
-                <p style="color:darkorange;">泰式甜點南瓜蛋奶布丁，在泰國的傳統市場及街坊隨處都可買到，秤重量計價販售，非常好吃的甜點，記得加煉乳增加香氣。</p>
-                <img style="width: 500px;height: 300px;" src="https://pic.pimg.tw/wispa/1586460265-413431744_n.jpg"
-                  alt="泰式南瓜布丁">
-              </li>
-              <li>
-                <h3 style="color: lightskyblue;">泰式煎餅</h3>
-                <p style="color:darkorange;">椰奶小脆餅（Kha nom
-                  Buang）：米粉、玉米粉、蛋黃、棕櫚糖和少許的鹽用水調和成麵糊，在燒熱的鐵板上塗上一層薄薄的麵糊，中間加入厚椰奶霜，然後鋪上切成細絲的蛋絲或椰絲，最後用特製的煎餅刀從烤熟的面皮一邊翻往另一邊壓住定型，看上去像個小元寶就完成了！
-                </p>
-                <img style="width: 500px;height: 300px;"
-                  src="https://visionthai.net/wp-content/uploads/2019/11/P1013644.webp" alt="泰式煎餅">
-              </li>
-              <li>
-                <h3 style="color: lightskyblue;">泰式甜蛋絲</h3>
-                <p style="color:darkorange;">泰國甜點裡面有很多黃澄澄的金亮菜色。這些都是婚慶活動，新居落成中會看到的祝福甜點。金絲通常代表的意義是長命百歲，事業有成。甜點的橘金色則完全是糖跟蛋組成，不需要加任何色素。這道甜點通常是鴨蛋與雞蛋混用。
-                </p>
-                <img style="width: 500px;height: 300px;"
-                  src="https://tuanuu.tw/wp-content/uploads/20160613064828_46.jpg" alt="泰式甜蛋絲">
-              </li>
-              <li>
-                <h3 style="color: lightskyblue;">泰式和菓子：露楚</h3>
-                <p style="color:darkorange;">
-                  泰國甜點露楚又名泰式和菓子，是一款精緻的傳統泰式甜點，也是節慶典禮不可缺少的食物，也作為泰國王室美食。從外表上看，它只有拇指大小，呈迷你水果和蔬菜的樣子，顏色鮮豔明亮，如今泰式和菓子在泰國集市上隨處可見，有機會品嘗的小夥伴可別錯過咯！
-                </p>
-                <img style="width: 500px;height: 300px;"
-                  src="https://down-tw.img.susercontent.com/file/5f2b3e30b56c3e4d8983adda0ec51cd8" alt="泰式和菓子：露楚">
-              </li>
-              <li>
-                <h3 style="color: lightskyblue;">泰式卡農扣椰奶撻</h3>
-                <p style="color:darkorange;">
-                  Khanom Khrok卡農扣外層是米漿的微脆口感，內層是椰奶餡的濃郁。傳統的餡料有熟的玉米粒/蒸過的芋頭丁/細香蔥這三種。通常三種口味各自獨立，不會出現綜合口味。這些年也有出現一些新鮮椰子肉的新口味。
-                </p>
-                <img style="width: 500px;height: 300px;"
-                  src="https://tuanuu.tw/wp-content/uploads/2021-04-16-021828-58.jpg" alt="泰式卡農扣椰奶燒">
-              </li>
-              <li>
-                <h3 style="color: lightskyblue;">椰奶糕</h3>
-                <p style="color:darkorange;">
-                  泰國人喜愛的甜食之一，因為購買方便，口感勁Q、味道甜美帶有葉子的香味，品種也豐富。這種糕點切成四方形的小件出售，有的底層加香草葉汁（ใบเตย）、有的底屠加西米露，是飯後常吃的甜點
-                </p>
-                <img style="width: 500px;height: 300px;" src="https://www.taithaione.com/geektic/images/124411s.jpg"
-                  alt="椰奶糕">
-              </li>
+  <div class="container-fluid text-center  mt-1">
+    <div class="row ">
+      <div class=" box mt-1">
+        <header>
+          <nav>
+            <ul class="nav">
+              <li><a class="nav2" href="#introduction">Home</a>
+              <li><a class="nav2" href="#attractions">Attraction</a>
+              <li> <a class="nav2" href="#food">Dessert</a>
+              <li> <a class="nav2" href="#videos">Video</a>
+              <li><a class="nav2" href="#links">Link</a>
             </ul>
-        </div>
-      </div>
-    </div>
-    </section>
-    <br>
-    <div class="container-fluid text-center border border-primary mt-1">
-      <div class="row ">
-        <div class=" box mt-1">
-          <section id="videos">
-            <h2>精彩影片</h2>
-            <div class="video-container">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/tk3jTu3Qlg8" frameborder="0"
-                allowfullscreen></iframe>
+          </nav>
+          <h1 style="font-size: 120px;padding-top: 50VH;text-align: left;padding-left: 50px;" class="thai"><em>
+              𝓣𝓱𝓪𝓲𝓵𝓪𝓷𝓭</em></h1>
+        </header>
+        <main>
+          <div class="container-fluid text-center border border-info mt-1">
+            <div class="row ">
+              <div class=" box bg-info-subtle">
+                <section style="color: rgb(82, 82, 155);" id="introduction">
+                  <h2 style="font-weight: 900;padding: 20px;">泰國介紹</h2>
+                  <div style="text-align: left;">
+                    <p>
+                      泰國已有700多年的歷史和文化,原名暹羅。西元1238年建立了素可泰王朝，開始形成較為統一的國家。先後經歷了素可泰王朝、大城王朝、吞武里王朝和卻克里王朝（
+                      曼谷王朝）。從16世紀起，先後遭到葡萄牙、荷蘭、英國和法國等殖民主義者的入侵。19世紀末，曼谷王朝五世王大量吸收西方經驗進行社會改革。1896年，英、法簽訂條約，規定暹羅為英屬緬甸和法屬印度支那之間的緩衝國，從而使暹羅成為東南亞唯一沒有淪為殖民地的國家。1932年6月，人民黨發動政變，建立君主立憲政體。1938年，鑾披汶執政，1939年6月更名為泰國，意為“自由之地”。1941年被日本佔領，泰國宣佈加入軸心國。1945年恢復暹羅國名。1949年5月又改稱泰國。在悠長的歷史中，泰國不斷吸收外來文化及移民。外來的作家、畫家、雕刻家、舞蹈員、音樂家及建築師等促使本土文化蓬勃發展。泰國當地居民其實是由多種民族組成。主要有泰人、蒙人、高棉人、寮國人、中國人、馬來人、波斯人和印度人，可說沒有純種的泰國人。
+                      因此泰人體型、骨格高矮不一、五官輪廓各異 ，而膚色深淺也有很大差別。大約有八成泰人與農業攀上關係。 在相當程度上，農業直接或間接受到宗教的節日和儀式的影響， 所以泰國是極具文化特色的國家。
+                    </p>
+                    <hr>
+                    <div class="row">
+                      <div style="color: green;" class="col-4">
+                        <img style="width:35%;height: 500px;" src="https://pic.pimg.tw/tattpe/4bbd4af24b776.gif" alt="">
+                        <img style="width:60%;height: 500px;" src="https://www.tattpe.org.tw/assets/images/info/map.jpg"
+                          alt="">
+                      </div>
+                      <div class="col-8">
+                        泰國位於中國和印度間中南半島之心臟地帶。面積約五十萬平方公里，人口約六千餘萬。泰西北與緬甸為鄰，東北接寮國、東連柬埔寨，南部與馬來西亞接壤。
+                        泰國將領土主要分為五大區域:<br> <br>
+
+                        <p style="color:rgb(216, 38, 38) ;">
+                          東北部：當地人稱為「伊森」的東北部屬湄公河流域，是山巒起伏的高原地帶，亦為5,600年前上古銅器時代文化薈萃的區域，受到鄰國高棉與寮國的影響而孕育豐富文化歷史及民俗節慶。
+                        </p>
+                        <p style="color: rgb(140, 13, 186);">
+                          北部：多山區叢林地形，山林景緻迷人，日常工作仍靠大象操作，也是泰國最涼爽的地區，最具代表性的城市即為清邁與清萊。冬季氣候清涼，可種植櫻桃和桃子。
+                        </p>
+                        <p style="color: rgb(130, 130, 5);">東部：最著名的觀光景點是芭達雅，而沿海星羅棋布的島嶼中，有許多更是觀光勝地，例如沙美島、昌島等。
+                        </p>
+                        <p style="color: green;">
+                          中部：平原土地肥沃，盛產大米和水果，山脈和河谷縱橫交錯，是發展水力發電的理想地區。曼谷即位於泰國中部，其他如華欣、七岩、大城等，都是中部的著名景點。
+                        </p>
+                        <p style="color: rgb(14, 132, 217);">
+                          南部：擁有潔白海灘、成群島嶼及豐富天然資源，例如錫礦、橡膠園和漁產。被安達曼海域與暹邏灣所包圍的泰南，有世界最好的海灘，除了普吉島，蘇梅、帕安島、龜島等都是絕佳的度假或潛水勝地。
+                        </p>
+                        <hr>
+                        泰國屬熱帶性氣候，全年三季分明：
+                        三月至五月為夏季
+                        六月至九月是陽光充沛的雨季
+                        十月到翌年二月為清涼季節
+                        泰國的常年氣溫在19~38 之間，平均氣溫約 28 ℃；濕度變化為 66%~82.8% 。一年分三季：涼季（十一月至二月）、夏季（三月至五月）、雨季（六月至十月）。曼谷最涼爽的氣溫平均為17
+                        度；最熱為 4 月份，約 38 度。高原上的清邁和北部的山區氣候較涼爽，最宜旅行。
+                        <hr>
+                        泰國一般使用佛曆，即以佛祖釋伽牟尼圓寂後一年為紀元之始，比世界通用的西曆早五百四十三年（即西元2023年為佛曆的2566年）。
+                        泰國時間比格林威治標準時間早7個小時，比台灣時間晚1小時。旅客從台灣境內上飛機後，勿忘將手錶撥慢1小時。
+                      </div>
+                      <div>
+                        <hr>
+                        <img style="width:100%;"
+                          src="https://www.agoda.com/wp-content/uploads/2019/10/Featured-photo-Wat-Arun-at-night-Bangkok-sightseeing.jpg"
+                          alt="">
+                        <br>
+                        <br>
+                        超過九成泰國人信奉塔娜娃達佛教，日常生活亦深受影響。泰國佛教起源於公元前三世紀，在目前全球最高佛教紀念碑所在地的 佛統府首先興起，時為公元前267 - 227年，印度佛教亞索加王朝（
+                        Asoka
+                        ）遣派僧侶到東南亞宣揚教義，其中一批到達佛統府後 ，就以此地為傳教基地。
+
+                        佛教是泰國道德禮教的「準則」，維繫社會和諧及推動藝術的原動力。與歐洲中世紀時代的天主教相似。泰國無數寺廟的重疊式屋簷，能使人引發創作的靈感。佛教影響力深入民間的另一原因是大部份泰國佛教家庭，必然有一位男丁入住寺廟修道，研習佛教道理。
+                        據佛教習俗，信奉佛教的男性而年
+                        齡超逾21歲者，在其一生中，須接受剃度一次，以實踐僧侶生活，短則五天，長則三個月。通常剃度會在每年避雨節期間舉行。為期三個月的避雨節中，每個僧侶都避免外遊，留在寺廟中靜修。
+                        除了作為佛教活動中心，泰國寺廟通常是小鎮的消息集散地、勞
+                        工僱用中心、新聞發佈處、藥物分發站和社區中心，有時更用作學校和醫療所。總之，泰國社會的寺廟具有多元化用途。泰人亦強調宗教自由，故其他宗教如回教、天主教、印度教及錫克教等，同時存在。
+
+                      </div>
+                    </div>
+                </section>
+              </div>
             </div>
+          </div>
+          <br>
+          <div class="container-fluid text-center border border-warning mt-1 bg-primary-subtle view">
+            <div class="row ">
+              <div class=" box mt-1">
+                <section id="attractions">
+                  <h2 style="font-weight: 900;padding: 20px;">熱門景點</h2>
+                  <ul>
+                    <li>
+                      <div class="container mt-1">
+                        <div class="row">
+                          <div class="col">
+                            <div class="d-grid gap-2 ">
+                              <button type="button" name="" id="slideBtn" class="btn btn-info  ">
+                                <h3>北 部</h3>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container vh-1">
+                        <div id="boxID" class="box boxID">
+                          <h5 style="text-align: left;padding: 50px;">
+                            多山區叢林地形，山林景緻迷人，日常工作仍靠大象操作，也是泰國最涼爽的地區，最具代表性的城市即為清邁與清萊。冬季氣候清涼，可種植櫻桃和桃子。</h5>
+                          <div class="row ">
+                            <div class="col-6">
+                              <div id="carouselExampleCaptions_1" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                  <button type="button" data-bs-target="#carouselExampleCaptions_1" data-bs-slide-to="0"
+                                    class="active aria-current=" true" aria-label="Slide 1"></button>
+                                  <button type="button" data-bs-target="#carouselExampleCaptions_1" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                  <button type="button" data-bs-target="#carouselExampleCaptions_1" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                                  <button type="button" data-bs-target="#carouselExampleCaptions_1" data-bs-slide-to="3"
+                                    aria-label="Slide 4"></button>
+                                  <button type="button" data-bs-target="#carouselExampleCaptions_1" data-bs-slide-to="4"
+                                    aria-label="Slide 5"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img
+                                      src="https://tluxe-aws.hmgcdn.com/public/article/2017/atl_20221109165309_115.jpg"
+                                      class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                      <h5>清邁 ChiangMai</h5>
+                                      <p>清邁是泰國的第二大城，保有許多的文化遺產，又有『藝術建築之寶殿堂』之稱。</p>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img
+                                      src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_201908300015.jpg"
+                                      class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                      <h5>素可泰
+                                        Sukhothai</h5>
+                                      <p>素可泰的原意是『幸福的黎明』，遺留著昔日的佛寺和宮殿燦爛的光華，在豐采中散發著一股古樸的氣氛！</p>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img
+                                      src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_201908300016.jpg"
+                                      class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                      <h5>清萊 ChiangRai</h5>
+                                      <p>群山景致、古文明遺址、歷史古蹟、佛教寺廟，和多個高山民族部落，至今仍維持迷人生活型態的純樸村莊。</p>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img
+                                      src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_201908300018.jpg"
+                                      class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                      <h5>湄宏順
+                                        Mae Hong Son</h5>
+                                      <p>四處點綴著壯麗的發瀑流泉與湍急的溪流鳴澗，為泰國版圖上最富原始情味的地區。</p>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img
+                                      src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_201908300019.jpg"
+                                      class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                      <h5>擺鎮 Pai</h5>
+                                      <p>這個如神奇寶石般的地方從不知名的小村莊逐漸發展成為繁榮的多文化城鎮。</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                  data-bs-target="#carouselExampleCaptions_1" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                  data-bs-target="#carouselExampleCaptions_1" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="col-md-6 box ">
+                              <div id="mapContainer" class="carousel slide" data-bs-ride="carouse">
+                                <iframe style="width: 630%; height:425%;"
+                                  src="https://www.google.com/maps/d/u/2/embed?mid=1csYYB5OKmBpqOAgpEzD5gaL3lrm3dxAg"
+                                  frameborder="0"></iframe>
+                              </div>
+                            </div>
+                          </div>
+                    </li>
+                    <li>
+                      <div class="container mt-1">
+                        <div class="row">
+                          <div class="col">
+                            <div class="d-grid gap-2 ">
+                              <button type="button" name="" id="slideBtn2" class="btn btn-primary  ">
+                                <h3>東 北 部</h3>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container vh-1">
+                        <div id="boxID2" class="box boxID">
+                          <h3>
+                          </h3>
+                          <h5 style="text-align: left;padding: 50px;">
+                            當地人稱為「伊森」的東北部屬湄公河流域，是山巒起伏的高原地帶，亦為5,600年前上古銅器時代文化薈萃的區域，受到鄰國高棉與寮國的影響而孕育豐富文化歷史及民俗節慶。</h5>
+                          <div class="row">
+                            <div class="col-6">
+                              <div id="carouselExampleCaptions_2" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                  <button type="button" data-bs-target="#carouselExampleCaptions_2" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                  <button type="button" data-bs-target="#carouselExampleCaptions_2" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                  <button type="button" data-bs-target="#carouselExampleCaptions_2" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                                  <button type="button" data-bs-target="#carouselExampleCaptions_2" data-bs-slide-to="3"
+                                    aria-label="Slide 4"></button>
+                                  <button type="button" data-bs-target="#carouselExampleCaptions_2" data-bs-slide-to="4"
+                                    aria-label="Slide 5"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img
+                                      src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_2019083000119.jpg"
+                                      class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                      <h5>雷府 Loei</h5>
+                                      <p>位於泰國東北部，寮國邊境，充滿異國風情及大自然野趣的雷府 Loei ，是深度旅遊的首選景點。</p>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img
+                                      src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_2019083000123.jpg"
+                                      class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                      <h5>烏汶府 Ubon Ratchathani</h5>
+                                      <p>烏汶府市是一個新興的商業中心，這裡集合道路、鐵路及航空交通樞紐。</p>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img
+                                      src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_2019083000121.jpg"
+                                      class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                      <h5>素林 Surin</h5>
+                                      <p>素林府的歷史與大象、泰絲及高棉帝國時期遺蹟息息相關。</p>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img
+                                      src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_2019083000122.jpg"
+                                      class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                      <h5>西薩菊Si Sa Ket</h5>
+                                      <p>西薩菊有12座保存的高棉遺址，是歷史旅迷不可錯過的景點。</p>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img
+                                      src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_2019083000120.jpg"
+                                      class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                      <h5>汶里藍
+                                        Buri Ram</h5>
+                                      <p>汶里藍碧邁歷史遺跡公園到汶里府靠近高棉邊境的高棉古寺帕儂藍寺景觀令人為觀止。</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                  data-bs-target="#carouselExampleCaptions_2" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                  data-bs-target="#carouselExampleCaptions_2" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="col-md-6 box ">
+                              <div id="mapContainer" class="carousel slide" data-bs-ride="carouse">
+                                <iframe style="width: 630%; height:425%;"
+                                  src="https://www.google.com/maps/d/u/2/embed?mid=1q48FBqRHQKMUmwuVhJ-kRPdM0HL-BMRf"
+                                  frameborder="0"></iframe>
+                              </div>
+                    </li>
+                    <li>
+                      <div class="container mt-1">
+                        <div class="row">
+                          <div class="col">
+                            <div class="d-grid gap-2 ">
+                              <button type="button" name="" id="slideBtn3" class="btn btn-success">
+                                <h3>東 部</h3>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container vh-1">
+                        <div id="boxID3" class="box boxID">
+                          <h3></h3>
+                          <h5 style="text-align: left;padding: 50px;">最著名的觀光景點是芭達雅，而沿海星羅棋布的島嶼中，有許多更是觀光勝地，例如沙美島、昌島等。</h5>
+                          <div class="row">
+                            <div class="col-6">
+                              <div id="carouselExampleCaptions_3" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                  <button type="button" data-bs-target="#carouselExampleCaptions_3" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                  <button type="button" data-bs-target="#carouselExampleCaptions_3" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                  <button type="button" data-bs-target="#carouselExampleCaptions_3" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img
+                                      src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_2019083000111.jpg"
+                                      class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                      <h5>芭達雅 Pattaya</h5>
+                                      <p>充滿浪漫情調的椰子、棕櫚樹為背景的沙灘，夜生活、色情文化豐富，一到芭達雅 Pattaya 便開始感受到渡假的氣氛。</p>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img
+                                      src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_2019083000110.jpg"
+                                      class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                      <h5>昌島 Ko Chang </h5>
+                                      <p>自然風光，海灣環繞，處處潔白沙灘、湛藍澄淨的海水，讓人恍如置身桃花源中。</p>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img
+                                      src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_2019083000112.jpg"
+                                      class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                      <h5>羅永 Rayong</h5>
+                                      <p>羅永擁有多變的地形景觀，從翠綠高山、多階瀑布、棕櫚樹林搖曳生姿的海灘和島嶼。</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                  data-bs-target="#carouselExampleCaptions_3" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                  data-bs-target="#carouselExampleCaptions_3" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="col-md-6 box ">
+                              <div id="mapContainer" class="carousel slide" data-bs-ride="carouse">
+                                <iframe style="width: 630%; height:425%;"
+                                  src="https://www.google.com/maps/d/u/2/embed?mid=1UqeuYjWXfsbeQDIl_2OWtxQhRm_zlO21"
+                                  frameborder="0"></iframe>
+                              </div>
+                            </div>
+                    </li>
+                    <li>
+                      <div class="container mt-1">
+                        <div class="row">
+                          <div class="col">
+                            <div class="d-grid gap-2 ">
+                              <button type="button" name="" id="slideBtn4" class="btn btn-warning">
+                                <h3>中 部</h3>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container vh-1">
+                        <div id="boxID4" class="box boxID">
+                          <h3></h3>
+                          <h5 style="text-align: left;padding: 50px;">
+                            平原土地肥沃，盛產大米和水果，山脈和河谷縱橫交錯，是發展水力發電的理想地區；曼谷即位於泰國中部，其他如華欣、七岩、大城等，都是中部的著名景點。</h5>
+                          <div class="row">
+                            <div class="col-6">
+                              <div id="carouselExampleCaptions_4" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                  <button type="button" data-bs-target="#carouselExampleCaptions_4" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                  <button type="button" data-bs-target="#carouselExampleCaptions_4" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                  <button type="button" data-bs-target="#carouselExampleCaptions_4" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                                  <button type="button" data-bs-target="#carouselExampleCaptions_4" data-bs-slide-to="3"
+                                    aria-label="Slide 4"></button>
+                                  <button type="button" data-bs-target="#carouselExampleCaptions_4" data-bs-slide-to="4"
+                                    aria-label="Slide 5"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img
+                                      src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_201908300013.jpg"
+                                      class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                      <h5>曼谷 Krung Thep Maha Nakhon (Bangkok)</h5>
+                                      <p>同時兼具古老氣息和現代風情的東方大城，是個處處充滿著讚歎與美麗的地方。</p>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img
+                                      src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_201908300011.jpg"
+                                      class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                      <h5>甘加那汶里府
+                                        Kanchanaburi</h5>
+                                      <p>北碧府擁有許多旅遊特色：自然優美的瀑布及國家公園，洞穴奇景、河上旅館，市區周圍有許多旅遊景點。</p>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img
+                                      src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_201908300012.jpg"
+                                      class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                      <h5>安帕瓦市
+                                        Amphoe Amphawa</h5>
+                                      <p>安帕瓦市在泰國大城王朝晚期及拉達那哥王朝早期有重要歷史文獻記載。</p>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img
+                                      src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_20190830001.jpg"
+                                      class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                      <h5>大城 Ayutthaya</h5>
+                                      <p>大城像一個手藝精湛的雕刻家，當地的寺廟、皇宮及佛像的鏤刻，無不表現出莊嚴典雅的作品。</p>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="https://www.tattpe.org.tw/uploads/attraction/CicadaMarket2_1.jpg"
+                                      class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                      <h5>華欣 HuaHin</h5>
+                                      <p>永恆的渡假天堂，泰國皇室最鍾愛的避暑勝地古文明風華萬千，佛教之美點滴烙下痕跡 。</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                  data-bs-target="#carouselExampleCaptions_4" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                  data-bs-target="#carouselExampleCaptions_4" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="col-md-6 box ">
+                              <div id="mapContainer" class="carousel slide" data-bs-ride="carouse">
+                                <iframe style="width: 630%; height:425%;"
+                                  src="https://www.google.com/maps/d/u/2/embed?mid=1MixjnPnVdrmr73c71aBNvSQ9nSIRG4xR"
+                                  frameborder="0"></iframe>
+                              </div>
+                            </div>
+                    </li>
+                    <li>
+                      <h3></h3>
+                      <div class="container mt-1">
+                        <div class="row">
+                          <div class="col">
+                            <div class="d-grid gap-2 ">
+                              <button type="button" name="" id="slideBtn5" class="btn btn-danger">
+                                <h3>南 部</h3>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container vh-1">
+                        <div id="boxID5" class="box boxID">
+                          <h5 style="text-align: left;padding: 50px;">
+                            擁有潔白海灘、成群島嶼及豐富天然資源，例如錫礦、橡膠園和漁產。被安達曼海域與暹邏灣所包圍的泰南，有世界最好的海灘，除了普吉島，蘇梅、帕安島、龜島等都是絕佳的度假或潛水勝地。
+                          </h5>
+                          <div class="row">
+                            <div class="col-6">
+                              <div id="carouselExampleCaptions_5" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                  <button type="button" data-bs-target="#carouselExampleCaptions_5" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                  <button type="button" data-bs-target="#carouselExampleCaptions_5" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                  <button type="button" data-bs-target="#carouselExampleCaptions_5" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                                  <button type="button" data-bs-target="#carouselExampleCaptions_5" data-bs-slide-to="3"
+                                    aria-label="Slide 4"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img
+                                      src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_2019083000114.jpg"
+                                      class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                      <h5>普吉 Phuket</h5>
+                                      <p>普吉 Phuket 具有得天獨厚的湛藍色大海、弦月形海灣、細柔白沙灘和一些點綴其中的美麗小島。</p>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img
+                                      src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_2019083000113.jpg"
+                                      class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                      <h5>喀比 Krabi</h5>
+                                      <p>喀比 Karabi 不僅有美不勝收的海景，也極適合生態及探險旅遊。</p>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img
+                                      src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_2019083000116.jpg"
+                                      class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                      <h5>蘇叻他尼
+                                        Surat Thani</h5>
+                                      <p>蘇叻他尼 Surat Thani 是泰國南部地區最老的城市之一，它的歷史可追溯至數千年前。</p>
+                                    </div>
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img
+                                      src="https://www.tattpe.org.tw/uploads/attraction/attraction_list_2019083000115.jpg"
+                                      class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block">
+                                      <h5>攀牙府
+                                        Phang Nga</h5>
+                                      <p>攀牙府 Phang-Nga 獨特的地貌特徵、色彩斑斕的珊瑚和海洋景觀也是其倍受關注的重要原因。</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                  data-bs-target="#carouselExampleCaptions_5" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                  data-bs-target="#carouselExampleCaptions_5" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="col-md-6 box ">
+                              <div id="mapContainer" class="carousel slide" data-bs-ride="carouse">
+                                <iframe style="width: 630%; height:425%;"
+                                  src="https://www.google.com/maps/d/u/2/embed?mid=1ZG9qtboaEkuMbqVI5iHVOzPapclFFKYt"
+                                  frameborder="0"></iframe>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+              </div>
+            </div>
+          </div>
+          </li>
+          </ul>
           </section>
-        </div>
-      </div>
-    </div>
-    <br>
-    <div class="container-fluid text-center border border-secondary mt-1">
-      <div class="row ">
-        <div class=" box mt-1">
-          <section id="links">
-            <h2>相關連結 </h2>
-            <ul>
-              <li><a href="https://www.tourismthailand.org/">泰國旅遊局官網</a></li>
-              <li><a href="https://www.tourismthailand.org/destinations">泰國旅遊目的地</a></li>
-              <li><a href="https://www.tourismthailand.org/activities">泰國旅遊活動</a></li>
-              <li><button id="submit-button" onclick="contactMe()">與我聯繫</button></li>
-              <script>
-                function contactMe() {
-                  alert("非常感謝你的聯繫！我會盡快回覆你的訊息。");
-                }
-              </script>
-            </ul>
+          <br>
+          <div class="container-fluid text-center border border-success mt-1 bg-success-subtle food">
+            <div class="row ">
+              <div class=" box mt-1">
+                <section id="food">
+
+                  <h2 style="font-weight: 900;padding: 20px;">泰國甜點</h2>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <h3 style="color: darkviolet;padding-top:50px;">泰式千層糕</h3>
+                        <p style="color: darkolivegreen;text-align: left;">
+                          泰式千層糕通常做9層，因為在泰國文化中，9有象徵繁榮、事業成功的寓意，所以做9層（最吉利），常出現在公司聚會或是婚禮等盛大慶祝活動。</p>
+                        <img style="width: 100%; max-height: 180px; object-fit: cover;"
+                          src="https://pic.pimg.tw/wispa/1586454985-3595165911_n.jpg" alt="泰式千層糕">
+                      </div>
+                      <div class="col-md-4">
+                        <h3 style="color: darkviolet;padding-top:50px;">泰式南瓜布丁</h3>
+                        <p style="color: darkolivegreen;text-align: left;">
+                          泰式甜點南瓜蛋奶布丁，在泰國的傳統市場及街坊隨處都可買到，秤重量計價販售，非常好吃的甜點，記得加煉乳增加香氣。</p>
+                        <img style="width: 100%; max-height: 180px; object-fit: cover;"
+                          src="https://pic.pimg.tw/wispa/1586460265-413431744_n.jpg" alt="泰式南瓜布丁">
+                      </div>
+                      <div class="col-md-4">
+                        <h3 style="color: darkviolet;padding-top:50px;">泰式煎餅</h3>
+                        <p style="color: darkolivegreen;text-align: left;">椰奶小脆餅（Kha nom
+                          Buang）：在燒熱的鐵板上塗上一層薄薄的麵糊，中間加入厚椰奶霜，然後鋪上切成細絲的蛋絲或椰絲。</p>
+                        <img style="width: 100%; max-height: 180px; object-fit: cover;"
+                          src="https://visionthai.net/wp-content/uploads/2019/11/P1013644.webp" alt="泰式煎餅">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <h3 style="color: darkviolet;padding-top:50px;">泰式甜蛋絲</h3>
+                        <p style="color: darkolivegreen;text-align: left;">
+                          泰國甜點裡面有很多黃澄澄的金亮菜色。這些都是婚慶活動，新居落成中會看到的祝福甜點。金絲通常代表的意義是長命百歲，事業有成。</p>
+                        <img style="width: 100%; max-height: 180px; object-fit: cover;"
+                          src="https://tuanuu.tw/wp-content/uploads/20160613064828_46.jpg" alt="泰式甜蛋絲">
+                      </div>
+                      <div class="col-md-4">
+                        <h3 style="color: darkviolet;padding-top:50px;">泰式和菓子：露楚</h3>
+                        <p style="color: darkolivegreen;text-align: left;">
+                          泰國甜點露楚又名泰式和菓子，是一款精緻的傳統泰式甜點，是節慶典禮不可缺少的食物，也作為泰國王室美食，通常做成拇指大的水果造型。</p>
+                        <img style="width: 100%; max-height: 180px; object-fit: cover;"
+                          src="https://down-tw.img.susercontent.com/file/5f2b3e30b56c3e4d8983adda0ec51cd8"
+                          alt="泰式和菓子：露楚">
+                      </div>
+                      <div class="col-md-4">
+                        <h3 style="color: darkviolet;padding-top:50px;">泰式卡農扣椰奶撻</h3>
+                        <p style="color: darkolivegreen;text-align: left;">Khanom
+                          Khrok卡農扣外層是米漿的微脆口感，內層是椰奶餡的濃郁。傳統的餡料有熟的玉米粒/蒸過的芋頭丁/細香蔥這三種。通常三種口味各自獨立，不會出現綜合口味。</p>
+                        <img style="width: 100%; max-height: 180px; object-fit: cover;"
+                          src="https://tuanuu.tw/wp-content/uploads/2021-04-16-021828-58.jpg" alt="泰式卡農扣椰奶燒">
+                      </div>
+                    </div>
+
+                  </div>
+              </div>
+            </div>
+          </div>
           </section>
+          <br>
+          <div class="container-fluid text-center border border-primary mt-1 bg-danger-subtle">
+            <div class="row ">
+              <div class=" box mt-1">
+                <section id="videos">
+                  <h2 style="font-weight: 900;padding: 20px;">影片介紹</h2>
+                  <div style="padding: 400px;" class="video-container">
+                    <iframe src="https://www.youtube.com/embed/8qyhpVsSqyE" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="container-fluid text-center border border-secondary mt-1 bg-secondary-subtle">
+            <div class="row ">
+              <div class=" box mt-1">
+                <section id="links">
+                  <h2 style="font-weight: 900;padding: 20px;">相關連結 </h2>
+                  <ul>
+                    <li><a href="https://www.tourismthailand.org/">泰國旅遊局官網</a></li>
+                    <li><a href="https://www.tourismthailand.org/destinations">泰國旅遊目的地</a></li>
+                    <li><a href="https://www.tourismthailand.org/activities">泰國旅遊活動</a></li>
+                    <li><button id="submit-button" onclick="contactMe()">與我聯繫</button></li>
+                    <script>
+                      function contactMe() {
+                        alert("非常感謝你的聯繫！我會盡快回覆你的訊息。");
+                      }
+                    </script>
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer>
+          <p> &copy; 2023 𝒸𝒽𝑒 𝓎𝓊𝒶𝓃</p>
+        </footer>
+        <div class="heart">
+          <div class="box1"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1"></div>
+          <div class="box1"></div>
+          <div class="box1"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 "></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 "></div>
+          <div class="box1 "></div>
+          <div class="box1 "></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 "></div>
+          <div class="box1 "></div>
+          <div class="box1 "></div>
+          <div class="box1 "></div>
+          <div class="box1 "></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 color"></div>
+          <div class="box1 "></div>
+          <div class="box1 "></div>
+          <div class="box1 "></div>
+          <div class="box1 "></div>
+          <div class="box1 "></div>
+          <div class="box1 "></div>
+          <div class="box1 "></div>
+          <div class="box1 color"></div>
+          <div class="box1 "></div>
+          <div class="box1 "></div>
+          <div class="box1 "></div>
+          <div class="box1 "></div>
         </div>
-      </div>
-    </div>
-  </main>
-  <footer>
-    <p>版權所有 &copy; 2023 𝒸𝒽𝑒 𝓎𝓊𝒶𝓃</p>
-  </footer>
-  <div class="heart">
-    <div class="box1"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1"></div>
-    <div class="box1"></div>
-    <div class="box1"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 "></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 "></div>
-    <div class="box1 "></div>
-    <div class="box1 "></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 "></div>
-    <div class="box1 "></div>
-    <div class="box1 "></div>
-    <div class="box1 "></div>
-    <div class="box1 "></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 color"></div>
-    <div class="box1 "></div>
-    <div class="box1 "></div>
-    <div class="box1 "></div>
-    <div class="box1 "></div>
-    <div class="box1 "></div>
-    <div class="box1 "></div>
-    <div class="box1 "></div>
-    <div class="box1 color"></div>
-    <div class="box1 "></div>
-    <div class="box1 "></div>
-    <div class="box1 "></div>
-    <div class="box1 "></div>
-  </div>
-  <script src="jquery.min.js"></script>
-  <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+          integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-
+        <script>
+          $(document).ready(function () {
+            const slideBtn = $('#slideBtn');
+            const box = $('#boxID');
+            slideBtn.click(function () {
+              box.slideToggle(100);
+            });
+          });
+          $(document).ready(function () {
+            const slideBtn = $('#slideBtn2');
+            const box = $('#boxID2');
+            slideBtn.click(function () {
+              box.slideToggle(100);
+            });
+          });
+          $(document).ready(function () {
+            const slideBtn = $('#slideBtn3');
+            const box = $('#boxID3');
+            slideBtn.click(function () {
+              box.slideToggle(100);
+            });
+          });
+          $(document).ready(function () {
+            const slideBtn = $('#slideBtn4');
+            const box = $('#boxID4');
+            slideBtn.click(function () {
+              box.slideToggle(100);
+            });
+          });
+          $(document).ready(function () {
+            const slideBtn = $('#slideBtn5');
+            const box = $('#boxID5');
+            slideBtn.click(function () {
+              box.slideToggle(100);
+            });
+          });
+        </script>
+        <button type="button" id="BackTop" class="toTop-arrow"></button>
+        <script>
+          $(function () {
+            $('#BackTop').click(function () {
+              $('html,body').animate({ scrollTop: 0 }, 333);
+            });
+            $(window).scroll(function () {
+              if ($(this).scrollTop() > 300) {
+                $('#BackTop').fadeIn(222);
+              } else {
+                $('#BackTop').stop().fadeOut(222);
+              }
+            }).scroll();
+          });
+        </script>
 </body>
 
 </html>
