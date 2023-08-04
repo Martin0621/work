@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        body {
+            background-color: pink;
+            width: 60%;
+            margin: auto;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .box {
+            background-color: lawngreen;
+            width: 50px;
+            height: 50px;
+        }
+
+        .container1 {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .box1 {
+            background-color: lawngreen;
+            width: 50px;
+            height: 50px;
+            margin-top: 30px;
+            margin-left: 20px;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 30px;
+
+        }
+
+        .box2 {
+            background-color: lawngreen;
+            width: 30%;
+            height: 50px;
+            margin-top: 30px;
+        }
+
+     
+        @media only screen and (max-width: 500px) {
+            body {
+                background-color: cornflowerblue;
+            }
+
+            .container {
+                flex-wrap: wrap;
+            }
+
+            .box {
+                width: 20%;
+                margin-bottom: 20px;
+            }
+        }
+
+
+        .box1 {
+            width: 20%;
+            margin-bottom: 20px;
+        }
+
+        .box2 {
+            width: 20%;
+            margin-bottom: 20px;
+        }
+
+        input{
+            width: 80%;
+            margin-bottom: 20px;
+            height: 50px;
+            border-radius: 15px;
+        }
+        label{
+            display: block;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    media queries
+    <table>
+        <div class="container">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+        <div class="container1">
+            <div class="box1"></div>
+            <div class="box1"></div>
+            <div class="box1"></div>
+            <div class="box1"></div>
+        </div>
+    </table>
+    <table>
+        <div class="column">
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+        </div>
+
+        <form action="container3">
+            <div class="">
+                <label for="">名字:</label>
+                <input type="">
+
+            </div>
+            <div class="">
+                <label for="">電話:</label>
+                <input type="">
+            </div>
+        </form>
+    </table>
+</body>
+
+</html>

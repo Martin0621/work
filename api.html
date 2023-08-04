@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Maps API AJAX Example</title>
+</head>
+<body>
+    <div>
+        <h1>查詢地點經緯度</h1>
+        <input type="text" id="location" placeholder="輸入地點名稱">
+        <button onclick="getCoordinates()">查詢</button>
+    </div>
+    <div id="coordinatesInfo"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function getCoordinates() {
+            const apiKey = 'AIzaSyDfi_x8ZoDm593q6qRKFEQ7AxoqhhmnFF0'; // 請替換為您自己的Google API金鑰
+            const location = document.getElementById('location').value;
+
+            const geocodeURL = `https://maps.googleapis.com/maps/api/geocode/json?address=${location}&key=${apiKey}`;
+
+            $.ajax({
+                url: geocodeURL,
+                method: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    displayCoordinates(data);
+                },
+                error: function (error) {
+                    console.error('取得經緯度時發生錯誤：', error);
+                }
+            });
+        }
+
+        function displayCoordinates(data) {
+            const coordinatesInfoDiv = document.getElementById('coordinatesInfo');
+
+            if (data.results.length > 0) {
+                const latitude = data.results[0].geometry.location.lat;
+                const longitude = data.results[0].geometry.location.lng;
+
+                coordinatesInfoDiv.innerHTML = `
+                    <h2>${data.results[0].formatted_address} 的經緯度：</h2>
+                    <p>緯度：${latitude}</p>
+                    <p>經度：${longitude}</p>
+                `;
+            } else {
+                coordinatesInfoDiv.innerHTML = `<p>無法找到該地點的經緯度。</p>`;
+            }
+        }
+    </script>
+</body>
+</html>

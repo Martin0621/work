@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ *{
+    box-sizing: border-box;
+ }
+
+        .container-row {
+            display: flex;
+            /* display: block;
+            display: inline;
+            display: inline-block; */
+            justify-content: center;
+            align-items: center;
+            height: 600PX;
+            background-color: rgb(154, 169, 169);
+            padding-top: 0.5%;
+            border-radius: 50%;
+
+        }
+
+        .item {
+            width: 500px;
+            height: 500px;
+            background-color: #f11c1c;
+            font-size: 470PX;
+            text-align: center;
+            border-radius: 100%;
+        }
+
+        .container-colum {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: 2000px;
+            justify-content: center;
+            align-items: center;
+            background-color: lightblue;
+            border-radius: 10%;
+            flex-wrap: wrap;
+            padding-top: 1.1%;
+            
+        }
+
+        .item-row{
+            margin-left: 10px;
+            color: rgb(0, 255, 34);
+
+        }
+        .item-column{
+            margin-bottom: 90px;
+            color:rgb(242, 238, 9);
+        }
+        h1{
+            font-size: 300PX;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>flex row</h1>
+    <div class="container-row">
+        <div class="item item-row">
+            1
+        </div>
+        <div class="item item-row">
+            2
+        </div>
+        <div class="item item-row">
+            3
+        </div>
+    </div>
+
+        <hr>
+
+        <h1>flex row</h1>
+        <div class="container-colum">
+            <div class="item item-column">
+                1
+            </div>
+            <div class="item item-column">
+               4
+            </div>
+            
+            <div class="item item-column">
+               7
+            </div>
+            <div class="item item-column">
+                2
+            </div>
+            <div class="item item-column">
+                5
+            </div>
+            <div class="item item-column">
+                8
+            </div>
+            <div class="item item-column">
+               3
+            </div>
+            <div class="item item-column">
+               6
+            </div>
+            <div class="item item-column">
+               9
+            </div>
+            <div class="item item-column">
+                *
+             </div>
+             <div class="item item-column">
+                0
+             </div>
+             <div class="item item-column">
+                #
+             </div>
+            </div>
+</body>
+
+</html>

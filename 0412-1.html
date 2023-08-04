@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>block vs inline-box</title>
+    <style>
+        div{
+            display: block;
+        }
+        span{
+            display: inline;
+        }
+        div{
+            height: 200PX;
+        }
+        span{
+            height: 200PX;
+        }
+        .nav{
+            background-color: bisque;
+        }
+        .nav>li{
+            padding: 20PX;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <!-- 區塊元素 -->
+    <!-- 行內元素 -->
+    <!-- inline-block -->
+    <iframe src="https://youtu.be/Aai9IZHkRJY" frameborder="0"></iframe>
+  <div>
+    block
+  </div>
+  <div>
+    block
+  </div>
+  <span>
+    inline
+  </span>
+  <span>
+    inline
+  </span>
+
+  <!-- inline-block -->
+  <ul class="nav">
+<li>
+    <a href="">test1</a>
+</li><li>
+    <a href="">test2</a>
+</li><li>
+    <a href="">test3</a>
+</li><li>
+    <a href="">test4</a>
+</li>
+  </ul>
+</body>
+</html>

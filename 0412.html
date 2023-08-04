@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+input{
+    background-color: antiquewhite;
+}
+input[type='number']{
+background-color: rgb(89, 255, 0);border-radius: 50%;
+}
+input:not([type='123']){
+    background-color: aquamarine;
+}
+.test{
+    color: red;
+}
+.myDiv>p:not(.test){
+    color: blueviolet;
+}
+</style>
+
+
+
+</head>
+<body>
+    <form action="">
+<p>
+    <label for="nane">123</label>
+    <input type="123" number="123" id="123">
+</p>
+<p>
+    <label for="name">名字</label>
+    <input type="text" name="name" id="name">
+</p>
+<p>
+    <label for="age">年紀</label>
+    <input type="text" name="age" id="age">
+</p>
+<p>
+    <label for="mobile">電話</label>
+    <input type="text" name="mobile" id="mobile">
+</p>
+<p class="test">
+    <label for="address">地址</label>
+    <input type="text" name="address" id="address">
+</p>
+<div class="myDiv">
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+</div>
+
+    </form>
+</body>
+</html>

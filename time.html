@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="clock">
+        <div class="numbers">
+            <div class="circle" id="sec" style="--clr:#f60e16;"><i></i></div>
+            <div class="circle" id="min" style="--clr:#2fed7e;"><i></i></div>
+            <div class="circle" id="hrs" style="--clr:#f0e107;"><i></i></div>
+            <span style="--i:0;">12</span>
+            <span style="--i:1;">1</span>
+            <span style="--i:2;">2</span>
+            <span style="--i:3;">3</span>
+            <span style="--i:4;">4</span>
+            <span style="--i:5;">5</span>
+            <span style="--i:6;">6</span>
+            <span style="--i:7;">7</span>
+            <span style="--i:8;">8</span>
+            <span style="--i:9;">9</span>
+            <span style="--i:10;">10</span>
+            <span style="--i:11;">11</span>
+        </div>
+        <div id="time">
+            <div id="hour" style="--clr:#07fefe;">00</div>
+            <div id="minutes" style="--clr:#2fed7e;">00</div>
+            <div id="seconds" style="--clr:#f60e16;">00</div>
+            <div id="ampm" style="--clr:#0c2c05;">AM</div>
+        </div>
+    </div>
+    <script>
+        let hr = document.querySelector('#hrs');
+        let mn = document.querySelector('#min');
+        let sc = document.querySelector('#sec');
+
+        setInterval(() => {
+            let day = new Date();
+            let hh = day.getHours() * 30;
+            let mm = day.getMinutes() * 6;
+            let ss = day.getSeconds() * 6;
+
+            hr.style.transform = `rotateZ(${hh + (mm / 12)}deg)`;
+            mn.style.transform = `rotateZ(${mm}deg)`;
+            sc.style.transform = `rotateZ(${ss}deg)`;
+
+            let hour = document.getElementById('hour');
+            let minutes = document.getElementById('minutes');
+            let seconds = document.getElementById('seconds');
+            let ampm = document.getElementById('ampm');
+
+            let h = new Date().getHours();
+            let m = new Date().getMinutes();
+            let s = new Date().getSeconds();
+
+            var am = h >= 12 ? 'PM' : 'AM';
+
+            hour.innerHTML = h;
+            minutes.innerHTML = m;
+            seconds.innerHTML = s;
+            ampm.innerHTML = am;  
+        })
+
+
+    </script>
+
+</body>
+
+</html>
