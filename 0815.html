@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>My Confession</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            background-image: url(https://cdn2.ettoday.net/images/6145/6145395.jpg);
+            background-size: 100%;
+            
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #f6d5d5;
+            background-image: url(data:image/jpeg;base64,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);
+            background-size: 100%;
+            border-radius: 50px;
+            width: 80%;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .sun {
+            width: 50px;
+            height: 50px;
+            background-color: #ffc107;
+            border-radius: 50%;
+            position: relative;
+            animation: rotateSun 10s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        .sun::before,
+        .sun::after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ffc107;
+            border-radius: 50%;
+        }
+
+        .sun::before {
+            top: -10px;
+            left: 0;
+        }
+
+        .sun::after {
+            bottom: -10px;
+            left: 0;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        #confessionText {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        #confessButton {
+            background-color: #ff6b6b;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        #confessButton:hover {
+            background-color: #e04545;
+        }
+
+        @keyframes rotateSun {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sun"></div>
+        <h1>哲源的真心話</h1>
+        <p id="confessionText">在我這段低潮的日子裡，因為有妳用心的陪伴，我慢慢恢復到原本的自己，並讓我對未來有希望與目標，妳對我的關心，我都有感受到，
+            謝謝妳，我會好好珍惜妳。</p>
+        <button id="confessButton">接收禮物</button>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        const confessionText = document.getElementById("confessionText");
+        const confessButton = document.getElementById("confessButton");
+
+        const newConfession = "恭喜妳獲得哲源這個屬於妳的小男人+永久免費電影票，哲源會乖乖聽妳的話，保護妳關心妳愛護妳，若有爭吵永遠都是哲源不對，會主動道歉。以後妳只要想看電，我都會陪妳一起。";
+
+        confessButton.addEventListener("click", () => {
+            confessionText.textContent = newConfession;
+            confessButton.style.display = "none";
+        });
+
+    </script>
+</body>
+
+</html>

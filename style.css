@@ -72,7 +72,7 @@ body {
 .numbers::before {
     content: '';
     position: absolute;
-    width: 4px;
+    width: 2px;
     height: 4px;
     border-radius: 50%;
     background: pink;
@@ -122,13 +122,13 @@ body {
 
 .numbers .circle#sec i {
 
-    width: 2px;
+    width: 3px;
 
 }
 
 .numbers .circle#min i {
 
-    width: 4px;
+    width: 7px;
 
 }
 

@@ -1,81 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <STyle>
-        button {
-            width: 50px;
-            height: 50px;
-            color: blue;
+    <title>哲源的作品集</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(220, 248, 205);
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            font-family: "標楷體", sans-serif;
         }
 
-        img {
-            width: 250px;
-            height: 250px;
+        .centered {
+            text-align: center;
         }
 
-        span {
-            width: 50px;
-            height: 50px;
-            border: 1px solid black;
+        header {
+            background-color: rgba(110, 235, 82, 0.8);
+            padding: 10px 0;
+            border-radius: 5px 5px 0 0;
         }
-.myDiv > a{
-    display: block;
-    width: 100px;
-    height: 100px;
-    color: aqua;
-    border: 1px solid red;
-    text-align: center;
-}
-       
-    </STyle>
+
+        header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 5px 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 0 0 10px 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2906f0;
+            margin: 0 10px;
+            
+        }
+
+        nav li {
+            padding: 5px;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav li:hover {
+            background-color: #f60358;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        main {
+            margin-top: 100px;
+            background-color: rgba(236, 184, 184, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px; /* Add margin at the bottom for footer */
+            text-align: center;
+        }
+
+        main h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        main img {
+            width: 31%;
+            margin: 5px;
+            border-radius: 5px;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 5px;
+            color: #0e07e6;
+            background-color: rgba(110, 235, 82, 0.8);
+            border-radius: 10px 10px 0 0;
+        }
+    </style>
 </head>
 
 <body>
-    <h3>
-        display : inline-block
-    </h3>
-    <p>img button input textarea select</p>
-    <button type="">button</button>
-    <button type="">button</button>
-    <button type="">button</button>
-    <br>
-    <img src="https://picsum.photos/id/238/200/300" alt="">
-    <img src="https://picsum.photos/id/238/200/300" alt="">
-    <img src="https://picsum.photos/id/238/200/300" alt="">
-    <hr>
+    <div class="centered">
+        <header>
+            <h1>哲源的作品集</h1>
+            <nav>
+                <ul>
+                    <li><a href="./0413apple.html">1</a></li>
+                    <li><a href="./0444.html">2</a></li>
+                    <li><a href="./0000.html">3</a></li>
+                    <li><a href="./0717.html">4</a></li>
+                    <li><a href="./0706.html">5</a></li>
+                    <li><a href="./0630.html">6</a></li>
+                    <li><a href="./0614.html">7</a></li>
+                    <li><a href="./0712.html">8</a></li>
+                    <li><a href="./time.html">9</a></li>
+                    <li><a href="./compute.html">10</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
 
-    <h3>
-        display : inline
-    </h3>
-    <p>Lorem ipsum <span> dolor </span> sit amet.
-    </p>
-    <div>
-        <a href="http://">inline</a>
-        <a href="http://">inline</a>
-        <a href="http://">inline</a>
+    <div class="container">
+        <main>
+            <h3>Photoshop</h3>
+            <div>
+                <img src="./23-1.jpg" alt="">
+                <img src="./3.jpg" alt="">
+                <img src="./04.jpg" alt="">
+            </div>
+            <div>
+                <img src="./23-2.jpg" alt="">
+                <img src="./4.jpg" alt="">
+                <img src="./5.jpg" alt="">
+            </div>
+        </main>
     </div>
-    <hr>
 
-    <h3>
-        display : block 
-    </h3>
-    <p>
-        hello p tag
-    </p>
-    <div>
-        hello div tag
-    </div>
-    <div class="myDiv">
-        <a href="http://">inline</a>
-        <a href="http://">inline</a>
-        <a href="http://">inline</a>
-    </div>
+    <footer>
+        <p> 𝒸𝒽𝑒 𝓎𝓊𝒶𝓃(0928)667-333</p>
+    </footer>
 </body>
 
 </html>
